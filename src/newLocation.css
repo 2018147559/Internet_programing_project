@@ -1,0 +1,107 @@
+/* layout */
+body {
+    background-color: #344963;
+}
+
+.contents {
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* header */
+a img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.about {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    left: 50px;
+    float: left;
+}
+
+.W_info {
+    position: relative;
+    left: 50px;
+}
+
+.temp {
+    float: left;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -4px;
+}
+
+#presentLoc {
+    width: 280px;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* 지도 */
+.map_wrap {
+    position: absolute;
+    width: 280px;
+    height: 400px;
+    top: 100px;
+}
+
+.hAddr {
+    position:absolute;
+    left:10px; top:10px;
+    border-radius: 2px;
+    background:#fff;
+    background:rgba(255,255,255,0.8);
+    z-index:2;
+    padding:5px;
+}
+
+#centerAddr {
+    display:block;
+    margin-top:2px;
+    font-weight: normal;
+}
+
+.bAddr {
+    padding:5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.modify {
+    position: relative;
+    left: 220px;
+    top: 340px;
+    z-index: 2;
+}
+
+#modify {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+#modify:hover {
+    background-color: aliceblue;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메인페이지</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=24cbe22241e76c0167a57aaedf536b2d&libraries=services,clusterer,drawing"></script>
+    <link rel="stylesheet" type = "text/css" href="main.css"/>
+    <script src="/main.js"></script>
+</head>
+<body>
+    <div class="contents">
+        <header>
+            <div>Main</div>
+            <!-- 사용자 표시 -->
+        </header>
+        <!-- 메인 페이지 로딩 될 때마다 날씨 update -->
+        <!-- 현재 위치의 (오늘)날씨 정보 보여주기 -->
+        <main id="main">
+            <div id="date"></div>   <!-- 오늘 날짜 -->
+            <div id="location"></div>   <!-- 현재 위치 -->
+            <div id="weather_icon"></div>  <!--날씨 아이콘 -->
+            <div id="weather"></div>    <!-- 현재 날씨 -->
+            <div class="temperature">
+                <span id="temp"></span>
+                <span id="feels_like"></span>
+            </div>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="/photos">사진 보기</a></li>
+                    <li><a href="/myphotos">나의 사진</a></li>
+                    <li><a href="/Post">사진 업로드</a></li>
+                    <li><a href="/newLocation">위치 설정</a></li>
+                </ul> 
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

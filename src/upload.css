@@ -1,0 +1,92 @@
+#signbody{
+    background-color: #344963;
+}
+.infobox{
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.info{
+    margin: 30px;
+    border-bottom: 3px solid;
+}
+
+.info input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.inputbutton{
+    padding: 6px 25px;
+    background-image: "./upload.png";
+    background-color: #6c5ce7;
+    cursor: pointer;
+}
+#email{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+#password{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+#name{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+#ok{
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:80%;
+    height:40px;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    background-position: left;
+    background-size: 200%;
+    color:white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+}
+
+a{
+    text-decoration-line: none;
+}
+img{
+    width: 40px;
+    height: 40px;
+    float: left;
+}

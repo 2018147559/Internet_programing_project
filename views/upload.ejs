@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "upload.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="upload.js"></script>
+</head>
+
+<body id="signbody">
+    <div class = "infobox">
+        <a href="/main"><img src="leftarrow.png" alt="&loarr;"></a> 
+    <form action="Post" method="post" enctype="multipart/form-data" id="send">
+        <input type="file" name="userfile" id="file">
+        <textarea name="information" rows="4" cols="30" id="info"></textarea>
+        <button type="button" onclick="post_file();"> POST ALL!</button>
+    </form>
+</div>
+</body>
+
+</html>

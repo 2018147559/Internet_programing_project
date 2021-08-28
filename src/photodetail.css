@@ -1,0 +1,119 @@
+/* layout */
+body {
+    background-color: #344963;
+}
+
+.contents {
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* header */
+#arrow {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.about {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    left: 50px;
+    float: left;
+}
+
+.W_info {
+    position: relative;
+    left: 50px;
+}
+
+.temp {
+    float: left;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -4px;
+}
+
+/* main */
+main {
+    position: absolute;
+    width: 280px;
+    top: 70px;
+    height: 420px;
+}
+
+#image > img {
+    width: 100%;
+    height: 320px;
+}
+
+#image_about {
+    border: solid thin;
+    height: 45px;
+    padding: 5px;
+    margin: 5px 0;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#image_about::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+#current_rate {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+#eval {
+    float: left;
+    position: relative;
+    margin: 7px 10px 7px 20px;
+}
+
+/* 별점 스타일 */
+.star_rating {
+    font-size: 0; 
+    letter-spacing: -4px;
+}
+
+.star_rating a {
+    font-size: 22px; 
+    letter-spacing: 0; 
+    display: inline-block; 
+    margin-left: 5px; 
+    color: #ccc; 
+    text-decoration: none;
+}
+
+.star_rating a:first-child {
+    margin-left: 0;
+}
+
+.star_rating a.on {
+    color: gold;
+}
+
+.star_rating a:hover {
+    color: gold;
+}
+
+
+
+

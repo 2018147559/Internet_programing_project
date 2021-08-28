@@ -1,0 +1,69 @@
+/* layout */
+body {
+    background-color: #344963;
+}
+
+.contents {
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* header */
+a img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.about {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    left: 50px;
+    float: left;
+}
+
+.W_info {
+    position: relative;
+    left: 50px;
+}
+
+.temp {
+    float: left;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -4px;
+}
+
+/* main */
+/* images */
+#showPhotos {
+    overflow: scroll;
+    height: 430px;
+    width: 280px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#showPhotos::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.image_container img {
+    width: 130px;
+    height: 160px;
+    margin: 10px 5px;
+    float: left;
+}

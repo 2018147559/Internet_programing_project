@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>코디 사진 디테일</title>
+    <link rel="stylesheet" type="text/css" href="/photodetail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="contents">
+        <header>
+            <img id="arrow" src="/leftarrow.png" alt="&loarr;" onclick="history.back()">
+            <div class="about">상세 정보</div>
+            <div class="W_info">
+                <!-- 날씨 정보 위에 작게 보여주기 -->
+                <div class="temp"><%=weather.temp.toFixed(0)%>&#8451;</div>
+                <img class="icon" src="<%=weather.icon%>" alt="<%=weather.weather%>">
+            </div>
+        </header>
+        <main>
+            <!-- photos에서 클릭한 사진의 정보를 가져와야 함 -->
+            <div id="image" class="<%=photo[0].image_id%>">
+                <img src="/./img/<%=photo[0].image_name%>" alt="<%=photo[0].image_name%>">
+            </div>
+            <div id="image_about">
+                <div><%=photo[0].image_inf%></div>
+            </div>
+            <div id="get_eval">
+                <!-- 현재 별점 -->
+                <div id="current_rate">
+                    <% if (photo[0].image_rate == null) { %>
+                        0.00
+                    <% } else { %>
+                        <% let rate = photo[0].image_rate %>
+                        <%= rate.toFixed(2) %> 
+                    <% } %>   
+                </div>
+                <!-- 별점 주기 -->
+                <div id="eval">평가 :</div>
+                <p class="star_rating">
+                    <a href="#" id="1">★</a>
+                    <a href="#" id="2">★</a>
+                    <a href="#" id="3">★</a>
+                    <a href="#" id="4">★</a>
+                    <a href="#" id="5">★</a>
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+<script>
+    // 별점
+    // 마우스 대면 색깔 입힘
+    $(".star_rating a").mouseover(function() {
+        $(this).parent().children("a").removeClass("on");
+        $(this).addClass("on").prevAll("a").addClass("on");
+    });
+    // 마우스 떼면 색 원래대로
+    $(".star_rating a").mouseout(function() {
+        $(this).parent().children("a").removeClass("on");
+    });
+    // click하면 서버로 별점 전송
+
+    $("p.star_rating a").click(function() {
+        let rate = $(this).attr("id");  // 별점
+        let imgNum = $("#image").attr("class");  // 현재 사진 번호
+        console.log(rate);
+
+        let change_rate = {
+            new_rate: parseInt(rate),
+            rating_img: imgNum
+        };
+        console.log(change_rate);
+
+        // 서버로 별점 전송
+        fetch('/change_rate', {
+            method:'POST',
+            body: JSON.stringify(change_rate),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(Response => Response.json())
+            .then(Response => {
+                console.log(Response.success);
+                if (Response.success) {
+                    location.reload();
+                    alert('평가가 반영되었습니다!');
+                }
+                else alert('오류 발생');
+            })
+            .catch(error => console.error(error))
+    });
+</script>
+</html>

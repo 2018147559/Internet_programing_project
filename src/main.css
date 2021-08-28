@@ -1,0 +1,96 @@
+body {
+    background-color: #344963;
+}
+
+.contents {
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 500px;
+}
+
+/* header */
+header div {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* background-color: lightsteelblue;
+    border-radius: 5px; */
+}
+
+/* main contents */
+main {
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    top: 70px;
+}
+
+#weather_icon img {
+    width: 200px;
+    height: 200px;
+}
+
+#weather {
+    position: relative;
+    top: -30px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.temperature {
+    position: relative;
+    top: -10px;
+    font-size: 19px;
+}
+
+#temp {
+    display: block;
+    width: 140px;
+    float: left;
+}
+
+#feels_like {
+    width: 140px;
+    display: inline-block;
+}
+
+/* footer */
+/* navigation */
+footer {
+    position: absolute;
+    width: 280px;
+    top: 400px;
+}
+
+/* nav {
+    background-color: lightsteelblue;
+    border-radius: 5px;
+} */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    width: 140px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px;
+}

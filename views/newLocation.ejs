@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>위치 설정</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=24cbe22241e76c0167a57aaedf536b2d&libraries=services,clusterer,drawing"></script>
+    <link rel="stylesheet" type = "text/css" href="newLocation.css"/>
+</head>
+<body>
+    <div class="contents">
+        <header>
+            <a href="/main"><img src="leftarrow.png" alt="&loarr;"></a>
+            <div class="about">위치 설정</div>
+            <div class="W_info">
+                <!-- 날씨 정보 위에 작게 보여주기 -->
+                <div class="temp"><%=weather.temp.toFixed(0)%>&#8451;</div>
+                <img class="icon" src="<%=weather.icon%>" alt="<%=weather.weather%>">
+            </div>
+        </header>
+        <!-- 현재위치 보여주기 -->
+        <div id="presentLoc"></div> 
+        <main>
+            <!-- 지도 가져오기 center = 현재 위치 -->
+            <div class="map_wrap">
+                <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;">
+                    <!-- 지도 중심 위치 표시, 지도 옮기면 바뀐다 -->
+                    <div class="hAddr">
+                        <span id="centerAddr"></span>
+                    </div>
+                    <div class="modify">
+                        <!-- 버튼 누르면 현재 위치 바꾸고 메인으로 돌아감 -->
+                        <button type="button" id="modify">위치수정</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="newLocation.js"></script>
+</body>
+</html>

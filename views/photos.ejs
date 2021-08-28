@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>코디 사진</title>
+    <link rel="stylesheet" type="text/css" href="photos.css" />
+</head>
+
+<body>
+    <div class="contents">
+        <header>
+            <a href="/main"><img src="leftarrow.png" alt="&loarr;"></a>
+            <div class="about">코디 추천</div>
+            <form>
+                <select id='sel' name='rule' onchange="this.form.submit()">
+                    <option value="0" <% if (selected == 0) { %>
+                        selected
+                    <% } %>>All</option>
+                    <option value="1" <% if (selected == 1) { %>
+                        selected
+                    <% } %>> Nearby </option>
+                    <option value="2" <% if (selected == 2) { %>
+                        selected
+                    <% } %>> Temperature </option>
+                    <option value="3" <% if (selected == 3) { %>
+                        selected
+                    <% } %>> Personal </option>
+                    <option value="4" <% if (selected == 4) { %>
+                        selected
+                    <% } %>> Rating </option>
+                    <option value="5" <% if (selected == 5) { %>
+                        selected
+                    <% } %>> Recommend </option>
+                </select>
+            </form>
+            <div class="W_info">
+                <!-- 날씨 정보 위에 작게 보여주기 -->
+                <div class="temp">
+                    <%=weather.temp.toFixed(0)%>&#8451;</div>
+                <img class="icon" src="<%=weather.icon%>" alt="<%=weather.weather%>">
+            </div>
+        </header>
+        <main>
+            <div id="showPhotos">
+                <% for( let i = 0; i < photos.length; i++ ) { %>
+                <div class="image_container" id="<%=photos[i].image_id%>">
+                    <img src="./img/<%=photos[i].image_name%>" alt="<%=photos[i].image_name%>">
+                </div>
+                <% } %>
+            </div>
+            <!-- 사진 받아와서 정렬기준으로 보여주기 -->
+            <!-- 사진 클릭하면 detail페이지로 넘어가기 = 모든 사진에 이벤트 삽입 -->
+            <!-- 클릭하는 사진의 정보 저장해서 detail 페이지로 넘겨줘야 함 -->
+        </main>
+    </div>
+</body>
+<script>
+let photoEvent = document.getElementsByClassName("image_container"); // array
+// $('#sel').on('change', function() {
+//     location.href = <%= selected %>;
+// });
+// $('#sel').val(<%= selected %>);
+for (let i = 0; i < photoEvent.length; i++) {
+    photoEvent[i].addEventListener("click", function() {
+        // 선택한 사진의 id 값 = image_id
+        let chosenPhoto = photoEvent[i].getAttribute("id");
+        console.log(chosenPhoto);
+        // detail 페이지로 이동
+        location.href = '/photodetail/' + chosenPhoto;
+    })
+}
+</script>
+
+</html>
